@@ -7,4 +7,4 @@ var duanziSchema = new Schema({
   commentLike:   Number,
   commentUnlike: Number
 });
-module.exports = mongoose.model('jandan', duanziSchema, 'jandan');
+module.exports = mongoose.model('jandan', duanziSchema, 'jandan'); // (modelName, schema, collectionName)
