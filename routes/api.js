@@ -21,7 +21,18 @@ router.get('/duanzi/', function(req, res, next) {
         }
         res.json(data);
     })
-
 });
+
+router.get('/duanzi/test', function(req, res, next){
+    jandan
+    .find({})
+    .limit(20)
+    .exec((err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.json(data);
+    })
+})
 
 module.exports = router;
