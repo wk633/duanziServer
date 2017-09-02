@@ -6,4 +6,5 @@ module.exports.connect = (uri) => {
         process.exit(1);
     })
     require('./jandan');
+    require('./tucao');
 }

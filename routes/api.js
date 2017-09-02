@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jandan = require('mongoose').model('jandan');
-
+const tucao = require('mongoose').model('tucao');
 /* GET users listing. */
 router.get('/duanzi/', function(req, res, next) {
     // var offset = 0;
@@ -27,6 +27,18 @@ router.get('/duanzi/test', function(req, res, next){
     jandan
     .find({})
     .limit(20)
+    .exec((err, data) => {
+        if (err) {
+            throw err;
+        }
+        res.json(data);
+    })
+})
+
+router.get('/tucao/:id', function(req, res, next){
+    let duanziId = req.params.id;
+    tucao
+    .find({"duanziId": duanziId})
     .exec((err, data) => {
         if (err) {
             throw err;
