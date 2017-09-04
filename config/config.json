@@ -1,3 +1,3 @@
 {
-    "mongoDbUri": "mongodb://localhost:27017/duanzi"
+    "mongoDbUri": "mongodb://admin:admin@ds123084.mlab.com:23084/duanzi"
 }
